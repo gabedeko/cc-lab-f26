@@ -1,3 +1,5 @@
-Critical Computation Lab
-Fall 2025
+# Critical Computation Lab
+<br>
+Fall 2026
+<br>
 Section: B

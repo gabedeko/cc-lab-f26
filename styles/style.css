@@ -301,16 +301,17 @@ img.original-img-style {
 }
 
 .home-body {
-  background-size: 10%;
-  background-position: 50% 50%;
-  background-image: url("../assets/cloisters_0x.jpg");
+  background-size: auto;
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  background-image: url("../assets/sour_bg.jpg");
   transition: background-size 15s ease-in-out;
 }
 
-.home-body.zoom-bg {
+/* .home-body.zoom-bg {
   background-size: 100%;
   transition: background-size 15s ease-in-out;
-}
+} */
 
 .home-item {
   background-color: rgba(221, 240, 255, .75);
