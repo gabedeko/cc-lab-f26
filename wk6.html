@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CC Lab Cloisters - Week 06</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- import the webpage's javascript file -->
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <!-- navigation menu -->
+  <nav></nav>
+
+  <!-- main content -->
+  <div class="content">
+    <!-- 1. give your project  a titile -->
+
+    <div class="header w6-header">
+      <div class="header-tint">
+        <h1 class="page-header">
+          WEEK 06
+        </h1>
+      </div>
+    </div>
+
+    <h1>
+      Technical Skills
+    </h1>
+
+    <div class="skills-box">
+      <ul>
+          <li>- for loop</li>
+          <li>- while loop</li>
+          <li>- nested for loop</li>
+        </ul>
+    </div>
+
+    <h1>
+      Agenda
+    </h1>
+
+    <table class="full-width mb-80">
+      <tr>
+      <td>- Check In</td>
+      <td>5 mins</td>
+    </tr>
+    <tr>
+      <td>- Assignment 4 Recap</td>
+      <td>5-10 mins</td>
+    </tr>
+    <tr>
+      <td>- For Loops + While Loops</td>
+      <td>10-15 mins</td>
+    </tr>
+    <tr>
+      <td>- Nested Loops</td>
+      <td>10-15 mins</td>
+    </tr>
+    <tr>
+      <td>- *Break*</td>
+      <td>20-30* mins</td>
+    </tr>
+    <tr>
+      <td>- Class Activity</td>
+      <td>15-25 mins</td>
+    </tr>
+    <tr>
+      <td>- Optical Illusion Overview</td>
+      <td>5-10 minute</td>
+    </tr>
+    <tr>
+      <td>- Open Lap</td>
+      <td>Remaining Time</td>
+    </tr>
+    </table>
+
+    <h2>
+      <a href="https://docs.google.com/document/d/1d0fHadr9IeRce3mFdmgA3bnG0kqwKewxVZ4Cjo7yEqM/edit?tab=t.0">Link to Assignment 5</a>
+    </h2>
+
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR5gESuWdtoOaWucLAj-r_OLCeBN8YFftJOT8dH6NGv1NSI5N_syGUW0erP-KHCf8EpIBQFvzF_1tEO/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    
+    <div id="editor">
+//
+      // for Loops
+      // https://p5js.org/examples/structure-loop.html
+      //
+      
+      function setup() {
+        createCanvas(300, 300);
+      }
+
+      function draw() {
+        background(100);
+        stroke(255);
+
+        for (let lineX = 30; lineX <= 270; lineX += 30) {
+          line(lineX, 0, lineX, height);
+        }
+      }
+        
+        
+      //
+      // while Loops
+      // https://p5js.org/reference/#/p5/while
+      // 
+      // https://editor.p5js.org/Mikey316/sketches/H181lEP7e
+      // - by Mikey316
+      //
+      
+      var y = 10
+      var x = 5
+      function setup() { 
+      createCanvas(400, 400);
+      background(220);
+      } 
+
+      function draw() { 
+      fill(random(255),random(255),random(255))
+        // ellipse(mouseX,mouseY,25,25);
+      while(x < 390){
+      x = x + 10;
+      ellipse(x, y, 10 ,10);
+      }
+      if(x >= 390){
+      x = 10
+        y = y + 10
+      }
+      }
+        
+      //
+      // nested for Loops
+      // https://www.freecodecamp.org/news/nesting-for-loops-in-javascript/
+      //
+      // https://editor.p5js.org/marynotari/sketches/ryAqIX43b
+      // - by marynotari
+      //
+        
+      let ypos = 140;
+      let ystep = 30;
+      let xpos = 80;
+      let xstep = 30;
+      function setup() {
+        createCanvas(400, 400);
+        noLoop();
+      }
+
+      function draw() {
+        background(255);
+        fill(50);
+        noStroke();
+
+        for (let j = 0; j < 5; j++) {
+          for (let i = 0; i < 9; i++) {
+            ellipse(xpos+(xstep*i), ypos+(ystep*j), 20, 20);
+          }
+        }
+      }
+   </div>
+
+          <div class="video-container">
+            <iframe class=" mt-64 youtube-vid" width="560" height="315" src="https://www.youtube.com/embed/G94jFWH8NSM"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript"
+            charset="utf-8"></script>
+          <script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai-light");
+            editor.session.setMode("ace/mode/javascript");
+          </script>
+
+
+    </div>
+</body>
+
+</html>

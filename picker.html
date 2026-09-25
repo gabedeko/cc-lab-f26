@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CC Lab Sour Gummy Worms - Pick a Student</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- import the webpage's javascript files -->
+  <script src="./script.js" defer></script>
+  <script src="./picker.js" defer></script>
+</head>
+
+<body>
+  <!-- navigation menu -->
+  <nav></nav>
+
+  <!-- main content -->
+  <div class="content">
+
+    <div class="header picker-header">
+      <div class="header-tint">
+        <h1 class="page-header">
+          PICK A STUDENT
+        </h1>
+      </div>
+    </div>
+
+    <h1>🍬 Random Student Picker 🍬</h1>
+
+    <div class="wheel-wrap">
+      <img src="assets/arrow-down-solid-full.svg" class="wheel-pointer" alt="Pointer" />
+      <div class="wheel" id="wheel"></div>
+    </div>
+
+    <button id="spin-btn" class="btn-1">Spin the Wheel</button>
+
+    <div id="winner-reveal" class="winner-reveal" aria-live="polite"></div>
+
+  </div>
+</body>
+
+</html>

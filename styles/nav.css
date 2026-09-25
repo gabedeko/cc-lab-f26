@@ -3,8 +3,8 @@
   width: auto;
   height: auto;
   display: inline-block;
-  background-color: rgba(221, 240, 255, .75);
-  border: 2px solid #94001c;
+  background-color: rgba(255, 242, 204, .75);
+  border: 2px solid #4a86e8;
 }
 
 .nav-link {
@@ -24,7 +24,7 @@
   white-space: nowrap;
 }
 
-.week-list {
+.week-list, .tool-list {
   font-weight: 500;
 }
 
