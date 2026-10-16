@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CC Lab Cloisters - Week 08</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- import the webpage's javascript file -->
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <!-- navigation menu -->
+  <nav></nav>
+
+  <!-- main content -->
+  <div class="content">
+    <!-- 1. give your project  a titile -->
+
+    <div class="header w8-header">
+      <div class="header-tint">
+        <h1 class="page-header">
+          WEEK 08
+        </h1>
+      </div>
+    </div>
+
+    <h1>
+      Technical Skills
+    </h1>
+
+    <div class="skills-box">
+      <ul>
+        <li>- Classes & Objects</li>
+        <li>- Constructors, member variables, methods</li>
+        <li>- Dot operator, this, new</li>
+      </ul>
+    </div>
+
+    <h1>
+      Agenda
+    </h1>
+
+    <table class="full-width mb-80">
+      <tr>
+        <td>- Check In</td>
+        <td>5 mins</td>
+      </tr>
+      <tr>
+        <td>- Data Portrait Review</td>
+        <td>10ish mins</td>
+      </tr>
+      <tr>
+        <td>- Classes & Objects</td>
+        <td>10-15 mins</td>
+      </tr>
+      <tr>
+        <td>- Constructors, member variables, methods</td>
+        <td>10-15 mins</td>
+      </tr>
+      <tr>
+        <td>- *Break*</td>
+        <td>20-30* mins</td>
+      </tr>
+      <tr>
+        <td>- Class Activity</td>
+        <td>5-10 minute</td>
+      </tr>
+      <tr>
+        <td>- Assignment 7 Workshop</td>
+        <td>Remaining Time</td>
+      </tr>
+    </table>
+
+    <h2>
+      <a href="https://docs.google.com/document/d/1DYIdMuNpSC4GNcuVbvwxutco9kLFjSpSdX--_51ZguI/edit?tab=t.0">Link to
+        Assignment 7</a>
+    </h2>
+
+    <iframe
+      src="https://docs.google.com/presentation/d/e/2PACX-1vQtA_p2eEZCJXMDNbXHl5nxDiiP1sy9NUOvc8_UcTxpwwp377jVQzzSDLkOEln8753RD8Lg2Gn-UiFX/pubembed?start=false&loop=false&delayms=3000"
+      frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
+      webkitallowfullscreen="true"></iframe>
+
+        <div id="editor">
+      //
+      // Class/Object Example
+      //
+      let energy1;
+      let energy2;
+      let energy3;
+
+      function setup() {
+        createCanvas(400, 400);
+
+
+        energy1 = new Energy(random(width), random(height)); // instantiates new object
+        energy2 = new Energy(random(width), random(height));
+        energy3 = new Energy(random(width), random(height));
+      }
+
+      function draw() {
+        background(220);
+
+        energy1.essence();
+        energy2.essence();
+        energy3.essence();
+
+        energy1.move();
+        energy2.move();
+        energy3.move();
+      }
+
+      class Energy {
+        constructor(x, y) { // a special method that creates energy objet
+
+          this.x = x; // dot operator
+          this.y = y;
+
+        }
+
+        essence(){
+          ellipse(this.x,this.y, 10, 10);
+        }
+
+        move() {
+          this.x++;
+
+          if (this.x > width){
+            this.x = 0;
+          }
+        }
+      }
+   
+   </div>
+
+    <div class="video-container">
+      <iframe class=" mt-64 youtube-vid" width="560" height="315" src="https://www.youtube.com/embed/9sfdAcxRrq8"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript"
+      charset="utf-8"></script>
+    <script>
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/monokai-light");
+      editor.session.setMode("ace/mode/javascript");
+    </script>
+
+
+  </div>
+</body>
+
+</html>
